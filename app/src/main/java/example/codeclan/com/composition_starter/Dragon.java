@@ -1,13 +1,20 @@
 package example.codeclan.com.composition_starter;
 
-public class Dragon extends MythicalBeast {
+import behaviours.Flyable;
+import behaviours.Protectable;
 
-  public Dragon(String name){
-    super(name);
-  }
+public class Dragon extends MythicalBeast implements Flyable, Protectable {
 
-  public String fly(){
-    return "Standing up tall, beating wings, lift off!";
-  }
+    public Dragon(String name) {
+        super(name);
+    }
+
+    public String fly() {
+        return "Standing up tall, beating wings, lift off!";
+    }
+
+    public String protect() {
+        return "Got your back Jack";
+    }
 
 }
